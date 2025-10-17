@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home_page():
     print("Flask Project")
     print("Automatic Server")
-    return render_template('home.html')
+    return render_template('home.html',language="HTML",project_name="Ecommerce",numbers=[1,2,3,4,5])
 
-@app.route('/about')
+@app.route('/about') 
 def about_page():
     print(request.args)
     print(request.args['name'])
